@@ -1,10 +1,8 @@
 import React from 'react';
+
 import Link from "next/link"
-import { Sparkles, Github } from 'lucide-react';
-import { ProjectCard } from '../components/project-card';
-import { FileText, Globe } from 'lucide-react';
-import clsx from 'clsx';
-import { ArrowUpRight } from 'lucide-react';
+import clsx from 'clsx'
+import { Sparkles, Github, FileText, Globe, ArrowUpRight } from 'lucide-react';
 
 type Project = {
   id: number;
