@@ -1,4 +1,8 @@
+'use client';
+
+import React from 'react'; 
 import Link from "next/link"
+import clsx from 'clsx';
 import { ArrowUpRight } from 'lucide-react';
 
 type Project = {
@@ -24,7 +28,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
     <div className="absolute top-0 right-0 p-4">
       <ArrowUpRight className="text-gray-400 w-5 h-5 transition-all duration-300 group-hover:text-blue-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
     </div>
-    <div className={`w-12 h-12 mb-4 rounded-lg flex items-center justify-center ${project.iconBg}`}>
+    <div className={clsx("w-12 h-12 mb-4 rounded-lg flex items-center justify-center", project.iconBg)}>
       {project.icon}
     </div>
     <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>

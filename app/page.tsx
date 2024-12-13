@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from "next/link"
 import { Sparkles, Github } from 'lucide-react';
-
 import { PROJECT_DATA } from '../data/project-data';
 import { ProjectCard } from '../components/project-card';
 
