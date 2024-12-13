@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# The Cove: A Sanctuary for Your Intelligent Solutions
 
-## Getting Started
+![Cove Landing Page](/public/images/cove-landing-page.png)
 
-First, run the development server:
+The Cove is a thoughtfully curated collection of AI-powered solutions designed to enhance your digital workflow. This platform serves as a central hub for discovering and accessing innovative tools that leverage artificial intelligence to solve everyday challenges.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [The Cove: A Sanctuary for Your Intelligent Solutions](#the-cove-a-sanctuary-for-your-intelligent-solutions)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Featured Projects](#featured-projects)
+    - [ProFile - ATS-Ready Resumes](#profile---ats-ready-resumes)
+    - [WHITW (What's Happening in the World?)](#whitw-whats-happening-in-the-world)
+  - [Conclusion](#conclusion)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The Cove brings together AI-powered solutions in a clean, accessible interface. Each project is crafted to address specific needs while maintaining simplicity and efficiency. The platform focuses on delivering practical tools that enhance productivity and streamline workflows.
 
-## Learn More
+## Featured Projects
 
-To learn more about Next.js, take a look at the following resources:
+### ProFile - ATS-Ready Resumes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Transform your resume into an ATS-optimized format instantly
+- AI-powered analysis of job descriptions
+- Tailored suggestions for resume enhancement
+- [Visit ProFile](https://pro-file-web.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### WHITW (What's Happening in the World?)
 
-## Deploy on Vercel
+- AI-powered news analysis and summarization
+- Real-time global perspectives on current events
+- Concise summaries and key insights
+- [Visit WHITW](https://whitw.vercel.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Conclusion
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The Cove is more than a collection—it’s a sanctuary for innovation and intelligent solutions. By providing a curated selection of AI tools, The Cove helps you unlock the full potential of artificial intelligence, fostering creativity and productivity. 
