@@ -1,10 +1,83 @@
 import React from 'react';
 import Link from "next/link"
 import { Sparkles, Github } from 'lucide-react';
-import { PROJECT_DATA } from '../data/project-data';
 import { ProjectCard } from '../components/project-card';
+import { FileText, Globe } from 'lucide-react';
+import clsx from 'clsx';
+import { ArrowUpRight } from 'lucide-react';
+
+type Project = {
+  id: number;
+  title: string;
+  excerpt: string;
+  tags: string[];
+  link: string;
+  iconBg: string;
+  icon: React.ReactNode;
+};
+
+type ProjectCard = {
+  link: string;
+  icon: React.ReactNode;
+  iconBg: string;
+  title: string;
+  excerpt: string;
+  tags: string[];
+};
+
+type ProjectCardProps = {
+  project: ProjectCard;
+};
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
+  <Link
+    href={project.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group relative bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300"
+  >
+    <div className="absolute top-0 right-0 p-4">
+      <ArrowUpRight className="text-gray-400 w-5 h-5 transition-all duration-300 group-hover:text-blue-500 group-hover:translate-x-1 group-hover:-translate-y-1" />
+    </div>
+    <div className={clsx("w-12 h-12 mb-4 rounded-lg flex items-center justify-center", project.iconBg)}>
+      {project.icon}
+    </div>
+    <h3 className="text-xl font-semibold text-gray-900 mb-2">{project.title}</h3>
+    <p className="text-gray-600 mb-4">{project.excerpt}</p>
+    <div className="flex flex-wrap items-center gap-2">
+      {project.tags.map((tag, index) => (
+        <span
+          key={index}
+          className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-600"
+        >
+          {tag}
+        </span>
+      ))}
+    </div>
+  </Link>
+);
 
 export default function Home() {
+  const PROJECT_DATA: Project[] = [
+    {
+      id: 1,
+      title: "ProFile",
+      excerpt: "Transform your resume into an ATS-optimized format instantly. Our AI analyzes job descriptions to help you create perfectly tailored resumes that get noticed.",
+      link: "https://pro-file-web.vercel.app/",
+      iconBg: "bg-emerald-100",
+      icon: <FileText className="w-6 h-6 text-emerald-600" />,
+      tags: ["Resume", "ATS", "AI Writing", "Job Search"]
+    },
+    {
+      id: 2,
+      title: "WHITW - What's Happening in the World?",
+      excerpt: "Stay informed with AI-powered news analysis. Get concise summaries, key insights, and global perspectives on current events.",
+      link: "https://whitw.vercel.app/",
+      iconBg: "bg-blue-100",
+      icon: <Globe className="w-6 h-6 text-blue-600" />,
+      tags: ["News", "AI Analysis", "Global"]
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
@@ -35,13 +108,6 @@ export default function Home() {
             
             <div className="flex justify-center gap-4">
               <Link
-                href="/projects"
-                passHref
-                className="px-6 py-3 rounded-lg bg-gray-900 text-white hover:bg-gray-800 transition-colors"
-              >
-                Explore Projects
-              </Link>
-              <Link
                 href="https://github.com/ahmadrafidev/cove"
                 passHref
                 className="px-6 py-3 rounded-lg bg-white text-gray-700 border border-gray-200 hover:bg-gray-50 transition-colors inline-flex items-center gap-2"
@@ -58,6 +124,12 @@ export default function Home() {
             {PROJECT_DATA.map((project, index) => (
               <ProjectCard key={index} project={project} />
             ))}
+          </div>
+
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-sm font-medium text-blue-700">
+              More projects coming soon
+            </div>
           </div>
         </main>
 
