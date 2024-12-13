@@ -1,7 +1,20 @@
 import Link from "next/link"
 import { ArrowUpRight } from 'lucide-react';
 
-export const ProjectCard = ({ project }) => (
+type Project = {
+  link: string;
+  icon: React.ReactNode;
+  iconBg: string;
+  title: string;
+  excerpt: string;
+  tags: string[];
+};
+
+type ProjectCardProps = {
+  project: Project;
+};
+
+export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <Link
     href={project.link}
     target="_blank"
