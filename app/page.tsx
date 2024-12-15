@@ -2,7 +2,14 @@ import React from 'react';
 
 import Link from "next/link"
 import clsx from 'clsx'
-import { Sparkles, Github, FileText, Globe, ArrowUpRight } from 'lucide-react';
+import { 
+  Sparkles, 
+  Github,
+  FileText, 
+  Globe, 
+  ArrowUpRight, 
+  SearchCheck 
+} from 'lucide-react';
 
 type Project = {
   id: number;
@@ -74,6 +81,15 @@ export default function Home() {
       iconBg: "bg-blue-100",
       icon: <Globe className="w-6 h-6 text-blue-600" />,
       tags: ["News", "AI Analysis", "Global"]
+    },
+    {
+      id: 4,
+      title: "Nous",
+      excerpt: "Nous is a cutting-edge tool designed to enhance consistency, accessibility, and scalability in design systems.",
+      link: "https://nouss.vercel.app/",
+      iconBg: "bg-cyan-100",
+      icon: <SearchCheck className="w-6 h-6 text-cyan-600" />,
+      tags: ["Design Tools", "Developer Tools", "AI Recommendation", "Design System"]
     },
   ];
 
