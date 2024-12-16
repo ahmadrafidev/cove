@@ -8,7 +8,8 @@ import {
   FileText, 
   Globe, 
   ArrowUpRight, 
-  SearchCheck 
+  SearchCheck,
+  Scroll
 } from 'lucide-react';
 
 type Project = {
@@ -66,7 +67,7 @@ export default function Home() {
   const PROJECT_DATA: Project[] = [
     {
       id: 1,
-      title: "ProFile",
+      title: "ProFile: ATS-ready resumes in seconds",
       excerpt: "Transform your resume into an ATS-optimized format instantly. Our AI analyzes job descriptions to help you create perfectly tailored resumes that get noticed.",
       link: "https://pro-file-web.vercel.app/",
       iconBg: "bg-emerald-100",
@@ -83,13 +84,22 @@ export default function Home() {
       tags: ["News", "AI Analysis", "Global"]
     },
     {
-      id: 4,
-      title: "Nous",
+      id: 3,
+      title: "Nous: An Intelligent Design Systems",
       excerpt: "Nous is a cutting-edge tool designed to enhance consistency, accessibility, and scalability in design systems.",
       link: "https://nouss.vercel.app/",
       iconBg: "bg-cyan-100",
       icon: <SearchCheck className="w-6 h-6 text-cyan-600" />,
       tags: ["Design Tools", "Developer Tools", "AI Recommendation", "Design System"]
+    },
+    {
+      id: 4,
+      title: "Liber: Intelligent Documentation Generator",
+      excerpt: "Liber simplifies and automates the creation of developer-friendly documentation",
+      link: "https://liberrr.vercel.app/",
+      iconBg: "bg-amber-100",
+      icon: <Scroll className="w-6 h-6 text-yellow-600" />,
+      tags: ["Documentation", "Developer Tools", "Generator"]
     },
   ];
 
